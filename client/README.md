@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-this a test from RANA.
+*this a test from RANA.*
 
 In the project directory, we can run:
 
