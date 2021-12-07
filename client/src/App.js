@@ -1,13 +1,16 @@
 import React from "react";
-import ActivitiesPage from "./Components/ActivitiesPage";
-import SpecificActivity from "./Components/SpecificActivity";
+import EventsPage from "./Components/EventsPage";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <h1>Hostel Life</h1>
-      <SpecificActivity />
-      <ActivitiesPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/events/:category" element={<EventsPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
