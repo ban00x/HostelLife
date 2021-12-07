@@ -24,8 +24,22 @@ const api = () => {
     const responseBody = { eventId: result.rows[0].id };
     return response.status(201).json(responseBody);
   };
+
+  //Add a GET endpoint
+  const getNewEvent = async (request, response) => {
+    try {
+      console.log("Helloo");
+      const result = await pool.query(`select * from events`);
+      response.status(200).send(result.rows);
+    } catch (err) {
+      console.log(err);
+      response.sendStatus(500);
+    }
+  };
   return {
     postNewEvent,
+    getNewEvent,
   };
 };
+
 module.exports = api;
