@@ -1,13 +1,24 @@
 import React from "react";
-import ActivitiesPage from "./Components/ActivitiesPage";
-import SpecificActivity from "./Components/SpecificActivity";
+import EventProfilePage from "./Components/EventProfilePage";
+import EventsPage from "./Components/EventsPage";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <h1>Hostel Life</h1>
-      <SpecificActivity />
-      <ActivitiesPage />
+      <BrowserRouter>
+        <Switch>
+          {/* <Route exact path="/events" component={EventsPage} /> */}
+          <Route path="/events/:category" component={EventsPage} />
+        </Switch>
+      </BrowserRouter>
     </>
   );
 };
