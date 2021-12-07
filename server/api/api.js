@@ -1,4 +1,4 @@
-const { Pool, Connection } = require("pg");
+const { Pool } = require("pg");
 
 const pool = new Pool({
   user: "postgres",
@@ -28,15 +28,12 @@ const api = () => {
   //Add a GET endpoint
   const getNewEvent = async (request, response) => {
     try {
-      const newEvent = request.params.body;
       console.log("Helloo");
-      const result = await Connection.query(
-        `select * from events where id=$1`,
-        [newEvent]
-      );
+      const result = await pool.query(`select * from events`);
       response.status(200).send(result.rows);
     } catch (err) {
       console.log(err);
+      response.sendStatus(500);
     }
   };
   return {

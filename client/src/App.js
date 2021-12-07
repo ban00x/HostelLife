@@ -4,7 +4,7 @@ import SpecificActivity from "./Components/SpecificActivity";
 
 const App = () => {
   useEffect(() => {
-    const url = "http://localhost:6000/events";
+    const url = "http://localhost:5000/events";
     fetch(url)
       .then((res) => res.json())
       .then((data) => console.log(data))
