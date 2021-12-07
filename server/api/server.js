@@ -7,11 +7,11 @@ app.use(bodyParser.json());
 const webApi = require("./api.js");
 const api = webApi();
 
-app.get("/", (req, res) => {
-  res.send("Hello Express");
-});
+//get new events
+app.get("/events", api.getNewEvent);
 //post new event
 app.post(`/events`, api.postNewEvent);
 
-
-app.listen(3000, () => console.log("HostelLife Server is up and running on port 3000"))
+app.listen(6000, () =>
+  console.log("HostelLife Server is up and running on port 6000")
+);
