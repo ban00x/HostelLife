@@ -41,18 +41,6 @@ export default function EventsPage() {
                   src="https://comunicandolonuevo.files.wordpress.com/2015/01/google-maps-new-interface1.jpg"
                   mb-2
                   alt="map"
-                />
-                <img
-                  className="google-map-img my-1"
-                  src="https://comunicandolonuevo.files.wordpress.com/2015/01/google-maps-new-interface1.jpg"
-                  mb-2
-                  alt="map"
-                />
-                <img
-                  className="google-map-img my-1"
-                  src="https://comunicandolonuevo.files.wordpress.com/2015/01/google-maps-new-interface1.jpg"
-                  mb-2
-                  alt="map"
                 /> */}
                 <div>
                   {events.map((event) => {
