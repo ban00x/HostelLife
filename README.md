@@ -1,7 +1,8 @@
 # HostelLife
 
-Client - frontend
-Server - backend
+1. Client - frontend
+2. Server - backend
+3. Database - PostgresSQL
 
 # Branches
 
@@ -16,6 +17,12 @@ Please create your own branches before commit.
     - Create a simple API (using Node.js inside server file)
     - Make sure it should display something (for e.g. “Hello world”).
 
+3. Database (PostgresSQL)
+    - Create a database (each team-member will have a indepentent database at their local machine).
+    - Datbase username has to be "hostel_life".
+    - Create a secret.json file for secret credentials (please check secret.json.example).
+    
+    - Populated some data in database and run it to see data on the client side (you may use the already written data from the hostel_life_sql file).
 
 (For the Second and Third part guys can work together)
 
