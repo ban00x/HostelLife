@@ -31,7 +31,7 @@ export default function EventsPage() {
 
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-center">Visit Places</h5>
+                <h5 className="card-title text-center">Visit Beautiful Places</h5>
                 <p className="card-text border text-center">
                   Select places to visit and meet new people who are visiting
                   similar places...
