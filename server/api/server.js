@@ -12,14 +12,10 @@ app.use(bodyParser.json());
 const webApi = require("./api.js");
 const api = webApi();
 
-//get new events
-//app.get("/events", api.getNewEvent);
-
-// get specific event
-app.get("/events", api.getSpecificEvent);
+app.get("/events", api.getEvents);
 
 //post new event
-app.post(`/events`, api.postNewEvent);
+app.post("/events", api.postNewEvent);
 
 app.listen(PORT, () =>
   console.log(`HostelLife Server is up and running on port ${PORT}`)

@@ -28,31 +28,18 @@ const api = () => {
     });
   };
 
-  //Add a GET endpoint
-  
-
-
-  // const getNewEvent = async (request, response) => {
-  //   try {
-  //     console.log("Helloo");
-  //     const result = await pool.query(`select * from events`);
-  //     response.status(200).send(result.rows);
-  //   } catch (err) {
-  //     console.log(err);
-  //     response.sendStatus(500);
-  //   }
-  // };
-
-    // GET Specific Event endpoint
-    const getSpecificEvent = async (request, response) => {
+    const getEvents = async (request, response) => {
       const category =  request.query.category;
       try {
         if(!category){
-          const result = await pool.query(`select * FROM events`);
+          const result = await pool.query(`select * FROM events`);  // show all events
           response.status(200).send(result.rows);
         }else{
 
-          const result = await pool.query(`SELECT * FROM events WHERE category="sports"`);
+          const lowerCasedCategory = category.toLowerCase();
+          const query = `SELECT * FROM events WHERE category LIKE '${lowerCasedCategory}'`;
+          console.log(query);
+          const result = await pool.query(query); // show searched events
           console.log(result);
           response.status(200).send(result.rows);
         }
@@ -64,7 +51,7 @@ const api = () => {
   
   return {
     postNewEvent,
-    getSpecificEvent
+    getEvents
   };
 };
 
