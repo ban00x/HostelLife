@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 // import { faSearch} from '@fortawesome/free-solid-svg-icons';
 
 import { SearchBar } from "./SeachBar";
+import {Categories} from "./categories/Categories";
 
 export default function EventsPage() {
   const [events, setEvents] = useState([]);
@@ -52,6 +53,7 @@ export default function EventsPage() {
           </div>
         </div>
       </div>
+      <Categories />
     </>
   );
 }

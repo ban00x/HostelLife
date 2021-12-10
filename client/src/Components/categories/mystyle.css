@@ -1,0 +1,18 @@
+ .hsh {
+    margin-bottom: 3em;
+    margin-top: 0.5em;
+    text-align: center;
+    color: cadetblue;
+}
+
+.hsbtn {
+    display: grid;
+    width: 70%;
+    height: 10%;
+    
+    margin: auto;
+    border: none;
+    margin-bottom: 2em;
+    border-radius: 4px;
+    font-size: 1.1em;
+}
